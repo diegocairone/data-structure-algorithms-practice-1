@@ -13,6 +13,23 @@ package com.cairone.dsa.slidingwindow;
 public class Exercise1 {
 
     public int getSumOfSize(int[] array, int k) {
-        return 0;
+
+        int maxSum = 0;
+        int currentSum = 0;
+        int windowStart = 0;
+
+        for (int windowEnd = 0; windowEnd < array.length; windowEnd++) {
+            int elem = array[windowEnd];
+            currentSum += elem;
+
+            if (windowEnd + 1 > k) {
+                currentSum -= array[windowStart];
+                windowStart++;
+            }
+
+            maxSum = Math.max(maxSum, currentSum);
+        }
+
+        return maxSum;
     }
 }

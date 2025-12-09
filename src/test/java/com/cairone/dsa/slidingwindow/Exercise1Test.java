@@ -20,7 +20,8 @@ class Exercise1Test {
 
     static Object[][] arrayProvider() {
         return new Object[][] {
-                { new int[] {2, 1, 5, 1, 3, 2}, 3, 9 }
+                { new int[] {2, 1, 5, 1, 3, 2}, 3, 9 },
+                { new int[] {2, 3, 4, 1, 5}, 2, 7 }
         };
     }
 }
